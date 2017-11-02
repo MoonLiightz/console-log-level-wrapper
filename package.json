@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Patrick Stebbe <info@moonliightz.de>",
   "main": "index.js",
+  "types": "index.d.ts",
   "bugs": {
     "email": "info@moonliightz.de",
     "url": "https://github.com/MoonLiightz/console-log-level-wrapper/issues"
