@@ -7,11 +7,13 @@
 - [Introduction](#introduction)
 - [Install](#install)
 - [Usage](#usage)
+  - [TypeScript](#typescript)
 - [Options](#options)
   - [pattern](#pattern)
   - [prefix](#prefix)
   - [level](#level)
 - [Examples](#examples)
+- [License](#license)
 
 ## Introduction
 
@@ -25,7 +27,7 @@ This module helps to print simple logs, that based on an information level, in a
 The module is currently available on github, so use the following command to install:
 
 ```sh
-$ npm install https://github.com/MoonLiightz/console-log-level-wrapper/archive/v0.1.0.tar.gz --save
+$ npm install https://github.com/MoonLiightz/console-log-level-wrapper/archive/v0.2.0.tar.gz --save
 ```
 
 ## Usage
@@ -61,6 +63,26 @@ logger.fatal('fatal');
 // [27.06.2017 12:55:10:904 GMT+0200][FATAL] fatal
 ```
 
+#### TypeScript
+
+```js
+import { ConsoleLogLevelWrapper } from 'console-log-level-wrapper';
+
+const log: ConsoleLogLevelWrapper = new ConsoleLogLevelWrapper({
+    pattern: 'dd.mm.yyyy HH:MM:ss:l Z',
+    level: 'trace'
+});
+
+log.trace('trace');
+log.debug('debug');
+log.info('info');
+log.warn('warn');
+log.error('error');
+log.fatal('fatal');
+
+// ...
+```
+
 ## Options
 
 #### pattern
@@ -81,3 +103,6 @@ A `String`to specify the log level. Default: `info`
 - You find some exmaples here: [simple-console-log-level-wrapper/examples/](https://github.com/MoonLiightz/console-log-level-wrapper/tree/master/examples)
 - For more details about the original console-log-level module look here: [watson/console-log-level](https://github.com/watson/console-log-level)
 - The node-dateformat module: [felixge/node-dateformat](https://github.com/felixge/node-dateformat)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
