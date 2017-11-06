@@ -27,7 +27,7 @@ This module helps to print simple logs, that based on an information level, in a
 The module is currently available on github, so use the following command to install:
 
 ```sh
-$ npm install https://github.com/MoonLiightz/console-log-level-wrapper/archive/v0.2.0.tar.gz --save
+$ npm install https://github.com/MoonLiightz/console-log-level-wrapper/archive/v0.2.1.tar.gz --save
 ```
 
 ## Usage
@@ -66,9 +66,9 @@ logger.fatal('fatal');
 #### TypeScript
 
 ```js
-import { ConsoleLogLevelWrapper } from 'console-log-level-wrapper';
+import ConsoleLogLevelWrapper = require('console-log-level-wrapper');
 
-const log: ConsoleLogLevelWrapper = new ConsoleLogLevelWrapper({
+const log = ConsoleLogLevelWrapper({
     pattern: 'dd.mm.yyyy HH:MM:ss:l Z',
     level: 'trace'
 });
