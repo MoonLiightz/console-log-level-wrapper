@@ -1,12 +1,12 @@
 'use strict';
 
-const console_log_level_wrapper = function(config) {
+const console_log_level_wrapper = function(config = { pattern: 'ddd mmm dd yyyy HH:MM:ss', level: 'info' }) {
     return require('console-log-level')({
         prefix: function (level) {
             function pad(pad, str, padLeft) {
-                if (typeof str === 'undefined')
+                if (typeof str === 'undefined') {
                     return pad;
-                if (padLeft) {
+                } else if (padLeft) {
                     return (pad + str).slice(-pad.length);
                 } else {
                     return (str + pad).substring(0, pad.length);
